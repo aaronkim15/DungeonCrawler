@@ -31,5 +31,15 @@ public class PlayerMovement : MonoBehaviour
         Vector3 movement = direction * (moveSpeed * Time.deltaTime);
         // TODO: pass the result to the CharacterController to move
         controller.Move(movement);
+        
+        // TODO: only rotate if the direction isn't zero (look up Vector3.sqrMagnitude or compare against Vector3.zero)
+        if (direction != Vector3.zero)
+        {
+            // TODO: turn the direction into a rotation with Quaternion.LookRotation
+            Quaternion turnRotate = Quaternion.LookRotation(direction);
+            
+            // TODO: set transform.rotation to that rotation
+            transform.rotation = turnRotate;
+        }
     }
 }
