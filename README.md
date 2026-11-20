@@ -22,22 +22,27 @@ A 3D dungeon crawler where you fight with fast melee combat against rooms of mon
 - [x] Player faces movement direction
 - [x] Camera unparents, fixed angle
 
-### v0.2: Player Attacking
-
-- [ ] Weapon creation for player
-- [ ] Player attack animation
-- [ ] Player being able to attack
-
-### v0.3: Enemy Attacking Player
+### v0.2: Enemy + HP
 
 - [ ] Create enemy capsule
+- [ ] HP system (shared by player and enemy)
+- [ ] Dies when HP hits 0
+
+### v0.3: Player Attacking
+
+- [ ] Weapon creation for player (placeholder)
+- [ ] Player can attack
+- [ ] Attack reduces HP (Same System)
+
+### v0.4: Enemy Attacking Player
+
+- [ ] Players dies when HP hits 0
 - [ ] Enemy capsule deals damage to player
 
-### v0.4: HP system for players
+### v0.5: Win + Lose
 
-- [ ] Player + Enemy lose HP for every hit
-- [ ] If HP threshold hit, Player / Enemy dies.
-
+- [ ] Player resets to beginning of game (AKA level 1)
+- [ ] Enemy drops loot, exp, or something on the same line.
 
 ## Devlog
 - **2026-11-16:** Player movement and rotation working.
