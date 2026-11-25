@@ -1,28 +1,39 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(Health))]
 public class Player : MonoBehaviour
 {
+    
     private Health health;
-    // This function is ran immediately, instead of being ran once this script is called.
+    // This function is run the moment the player object is loaded into the scene
     private void Awake()
     {
-        // TODO: get the Health component
+        // Get the Health component
         health = GetComponent<Health>();
         
-        // TODO: subscribe to Health's death event with a method below
-
+        // Subscribe (add) to Health's death event with a method below
+        health.OnDeath += HandleDeath;
     }
 
-    // Destroys player and r
-    private void OnDestory()
+    // Deletes the HandleDeath method from the OnDeath event.
+    private void OnDestroy()
     {
-        // TODO: unsubscribe from health death event
+        // Unsubscribe from health death event
+        health.OnDeath -= HandleDeath; 
     }
     
-    // handles player death
+    // Handles player death
     private void HandleDeath()
     {
+        // Loads the 'SampleScene' scene using SceneManager
+        SceneManager.LoadScene("Testing_Sandbox");
         
+    }
+
+    void Update()
+    {
+       
     }
 }
