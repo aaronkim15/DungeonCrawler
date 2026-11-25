@@ -14,7 +14,7 @@ A 3D dungeon crawler where you fight with fast melee combat against rooms of mon
 - C#, new Input System
 - CharacterController for player movement
 
-## RoadMap
+## Roadmap
 
 ### v0.1: Movement
 
@@ -24,7 +24,7 @@ A 3D dungeon crawler where you fight with fast melee combat against rooms of mon
 
 ### v0.2: Enemy + HP
 
-- [ ] Create enemy capsule
+- [x] Create enemy capsule
 - [ ] HP system (shared by player and enemy)
 - [ ] Dies when HP hits 0
 
@@ -42,7 +42,7 @@ A 3D dungeon crawler where you fight with fast melee combat against rooms of mon
 ### v0.5: Win + Lose
 
 - [ ] Player resets to beginning of game (AKA level 1)
-- [ ] Enemy drops loot, exp, or something on the same line.
+- [ ] Black rectangle door appears indicating winning.
 
 ## Devlog
 - **2026-11-16:** Player movement and rotation working.
